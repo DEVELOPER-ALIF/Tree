@@ -1,0 +1,367 @@
+/* General styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #2e8b57, #4caf50); /* Green gradient background */
+  color: #333;
+}
+
+/* Header Section Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(46, 139, 87, 0.8); /* Semi-transparent green background */
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+header .logo img {
+  max-width: 150px;
+  height: auto;
+  margin-left: 20px;
+}
+
+header .menu-toggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+}
+
+header nav ul li {
+  margin-left: 30px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+  color: #d9d9d9;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+  }
+
+  header .logo img {
+      max-width: 120px;
+      margin-left: 0;
+  }
+
+  header .menu-toggle {
+      display: block;
+      left: 20px;
+      top: 20px;
+  }
+
+  header nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      margin-top: 20px;
+  }
+
+  header nav ul li {
+      margin: 10px 0;
+  }
+
+  header nav ul li a {
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+      text-align: left;
+      border-top: 1px solid #ddd;
+  }
+
+  header nav ul.show {
+      display: flex;
+  }
+
+  header nav ul li a:hover {
+      background-color: #2e8b57;
+      color: white;
+  }
+}
+
+/* Hero Section */
+#hero {
+  background: url('your-background-image.jpg') no-repeat center center/cover; /* Add your image or use a gradient */
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.cta-btn {
+  background-color: #ff5722;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.cta-btn:hover {
+  background-color: #e64a19;
+}
+
+/* Roadmap Section */
+.roadmap {
+  padding: 60px 0;
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+}
+
+.roadmap h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #333;
+}
+
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.timeline-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-basis: 30%;
+  margin-bottom: 20px;
+}
+
+.timeline-item h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #2e8b57; /* Green color */
+}
+
+.timeline-item p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Tokenomics Section */
+#tokenomics {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+#tokenomics h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+#tokenomics table {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+#tokenomics th, td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#tokenomics th {
+  background-color: #2e8b57;
+  color: white;
+}
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  text-align: center;
+}
+
+.social-links a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #2e8b57;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  color: #ff5722;
+}
+
+/* Chart Section */
+.roadmap-chart {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .logo img {
+    max-width: 120px;
+  }
+
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+  }
+
+  header .menu-toggle {
+    display: block;
+  }
+
+  header nav ul.show {
+    display: flex;
+  }
+
+  #hero h1 {
+    font-size: 36px;
+  }
+
+  #hero p {
+    font-size: 20px;
+  }
+
+  .cta-btn {
+    font-size: 16px;
+  }
+
+  .timeline-item {
+    flex-basis: 100%;
+  }
+
+  .roadmap h2 {
+    font-size: 28px;
+  }
+
+  .timeline-item h3 {
+    font-size: 22px;
+  }
+
+  .timeline-item p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-item {
+    padding: 15px;
+  }
+
+  .roadmap h2 {
+    font-size: 24px;
+  }
+
+  .timeline-item h3 {
+    font-size: 20px;
+  }
+
+  .timeline-item p {
+    font-size: 14px;
+  }
+
+  #hero h1 {
+    font-size: 28px;
+  }
+
+  #hero p {
+    font-size: 18px;
+  }
+
+  .cta-btn {
+    font-size: 14px;
+  }
+}
+/* Footer Styling */
+footer {
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  background-color: #2e8b57; /* Match with the theme color */
+  color: white;
+  font-size: 14px;
+  margin-top: 40px; /* Adds some spacing above the footer */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+footer p {
+  margin: 0;
+}
